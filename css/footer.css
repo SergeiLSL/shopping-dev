@@ -1,0 +1,37 @@
+.footer {
+  background: #000;
+}
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer__info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+.footer__columns {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.info-footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: toRem(14);
+     -moz-column-gap: toRem(14);
+          column-gap: toRem(14);
+}
+.columns-footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.columns-footer__column-company {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.3333%;
+          flex: 0 1 33.3333%;
+}
