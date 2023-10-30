@@ -1,3 +1,53 @@
-//====================================================================================================
+//===========================================================================================
 
-//====================================================================================================
+//===========================================================================================
+
+//=========================================================================================
+//=========================================================================================
+// .page__brands
+.brands {
+	@include adaptiveValue("padding-top", 60, 25);
+	@include adaptiveValue("padding-bottom", 55, 25);
+	background-color: $pageColor;
+	// .brands__container
+	&__container {
+	}
+	// .brands__inner
+	&__inner {
+		max-width: toRem(1570);
+		margin: 0 auto;
+		@media (max-width: $tablet) {
+			max-width: toRem(962);
+		}
+	}
+	// .brands__items
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		column-gap: toRem(10);
+		row-gap: toRem(20);
+		align-items: center;
+		background: lightgray -54.959px -61.056px / 162.162% 296.296% no-repeat;
+		mix-blend-mode: multiply;
+		background: transparent;
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: $tablet) {
+			flex-wrap: wrap;
+		}
+	}
+	// .brands__item
+	&__item {
+		flex: 0 1 15%;
+		@media (max-width: $tablet) {
+			flex: 0 1 31%;
+			text-align: center;
+		}
+		@media (max-width: $mobileSmall) {
+			flex: 0 1 47%;
+		}
+	}
+}
+//=========================================================================================
+//=========================================================================================
