@@ -6,9 +6,11 @@ import { flsModules } from "./modules.js";
 // Підключення з node_modules
 import tippy from 'tippy.js';
 
-// Підключення стилів з src/scss/libs
+// 
+Подключение стилей з src / scss / libs
 import "../../scss/libs/tippy.scss";
-// Підключення стилів з node_modules
+// 
+Подключение стилей з node_modules
 //import 'tippy.js/dist/tippy.css';
 
 // Запускаємо та додаємо в об'єкт модулів

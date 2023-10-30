@@ -1,6 +1,6 @@
-// Підключення плагіна з node_modules
+// Подключение плагина с node_modules
 import SimpleBar from 'simplebar';
-// Підключення стилів з node_modules
+// Подключение стилей из node_modules
 import 'simplebar/dist/simplebar.css';
 
 // Додаємо до блоку атрибут data-simplebar
