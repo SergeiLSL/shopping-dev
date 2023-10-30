@@ -1,1 +1,14 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.btn {
+	display: inline-block;
+	font-weight: 500;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: toRem(8);
+	background-color: #000;
+	flex: 0 0 auto; // чтобы текст в кнопке не складывался
+	transition: color 0.3s ease;
+	&:hover {
+		color: #e5c643;
+	}
+}

@@ -1,0 +1,16 @@
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: toRem(8);
+  background-color: #000;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.btn:hover {
+  color: #e5c643;
+}

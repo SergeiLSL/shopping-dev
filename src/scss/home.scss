@@ -1,5 +1,15 @@
 //===========================================================================================
-
+.page {
+	// .page__brands
+	&__brands {
+	}
+	// .page__new-arrivals
+	&__new-arrivals {
+	}
+	// .page__community
+	&__community {
+	}
+}
 //===========================================================================================
 
 //=========================================================================================
@@ -50,4 +60,97 @@
 	}
 }
 //=========================================================================================
+//================================================================================
+// .page__new-arrivals
+.new-arrivals {
+	@include adaptiveValue("padding-top", 75, 25);
+	@include adaptiveValue("padding-bottom", 75, 25);
+	background-color: #fff;
+	// .new-arrivals__container
+	&__container {
+	}
+	// .new-arrivals__inner
+	&__inner {
+	}
+}
+//================================================================================
 //=========================================================================================
+// .page__community
+.community {
+	@include adaptiveValue("padding-top", 141, 35);
+	@include adaptiveValue("padding-bottom", 156, 35);
+	background-color: #e5c643;
+	// .community__container
+	&__container {
+	}
+	// .community__inner
+	&__inner {
+		margin: 0 auto;
+		color: #fff;
+		max-width: toRem(1010);
+		text-align: center;
+	}
+	// .community__title
+	&__title {
+		@include adaptiveValue("font-size", 55, 30);
+		font-weight: 900;
+		line-height: toRem(70);
+		@include adaptiveValue("line-height", 70, 40);
+		&:not(:last-child) {
+			margin-bottom: toRem(22);
+		}
+	}
+	// .community__text
+	&__text {
+		color: #fffcf8;
+		font-size: toRem(32);
+		@include adaptiveValue("font-size", 32, 22);
+		line-height: toRem(35);
+		letter-spacing: toRem(0.96);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 43, 30);
+		}
+	}
+	// .community__send
+	&__send {
+		margin: 0 auto;
+		flex: 0 1 toRem(574);
+		max-width: toRem(574);
+		@media (max-width: $mobile) {
+			flex: 0 1 auto;
+			width: 100%;
+		}
+	}
+}
+.send {
+	display: flex;
+	padding: toRem(10);
+	justify-content: space-between;
+	gap: toRem(20);
+	background: #fff;
+	border-radius: toRem(10);
+	@media (max-width: $mobile) {
+		flex-direction: column;
+	}
+	// .send__input
+	&__input {
+		width: 100%;
+		color: #2d2d2d;
+		@include adaptiveValue("font-size", 24, 18);
+		line-height: toRem(35);
+		letter-spacing: toRem(0.72);
+		padding: toRem(0) toRem(17);
+		@media (max-width: $mobile) {
+			padding: toRem(0) toRem(5);
+		}
+	}
+	// .send__button
+	&__button {
+		@include adaptiveValue("font-size", 33, 24);
+		line-height: toRem(35);
+		letter-spacing: toRem(0.99);
+		padding: toRem(16) toRem(36);
+	}
+}
+//================================================================================
+//================================================================================
