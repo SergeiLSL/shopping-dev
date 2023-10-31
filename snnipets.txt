@@ -123,14 +123,14 @@
 	"Add input tag": {
 		"scope": "html",
 		"prefix": "inp",
-		"body": "<input autocomplete=\"off\" type=\"text\" name=\"form[]\" data-error=\"Помилка\" placeholder=\"\" class=\"input\">",
-		"description": "Додає input з налаштуваннями"
+		"body": "<input autocomplete=\"off\" type=\"text\" name=\"form[]\" data-error=\"Ошибка\" placeholder=\"\" class=\"input\">",
+		"description": "Добавляет input с настройками"
 	},
 	"Add container": {
 		"scope": "html",
 		"prefix": "cnt",
 		"body": "<div class=\"${1:name}__container\">\n\t$2\n</div>",
-		"description": "Додає обмежуючий контейнер"
+		"description": "Добавляет ограничивающий контейнер"
 	},
 	"Adaptiv Value": {
 		"scope": "scss",
@@ -146,7 +146,7 @@
 		"body": [
 			"em($1,$2)"
 		],
-		"description": "Виклик міксину переведення в EM"
+		"description": "Вызов миксина перевода в EM"
 	},
 	"REM": {
 		"scope": "scss",
@@ -154,7 +154,7 @@
 		"body": [
 			"toRem($1)"
 		],
-		"description": "Виклик міксину переведення в REM"
+		"description": "Вызов миксина перевода в REM"
 	},
 	"Percent": {
 		"scope": "scss",
@@ -162,7 +162,7 @@
 		"body": [
 			"percent($1,$2)"
 		],
-		"description": "Виклик міксину переведення в %"
+		"description": "Вызов миксина перевода в %"
 	},
 	"Percent padding": {
 		"scope": "scss",

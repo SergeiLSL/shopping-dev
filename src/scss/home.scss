@@ -1,5 +1,8 @@
 //===========================================================================================
 .page {
+	// .page__hero
+	&__hero {
+	}
 	// .page__brands
 	&__brands {
 	}
@@ -11,6 +14,154 @@
 	}
 }
 //===========================================================================================
+// .page__hero
+.hero {
+	@include adaptiveValue("padding-top", 68, 30);
+	@include adaptiveValue("margin-bottom", 63, 15);
+	// .hero__container
+	&__container {
+		border-radius: toRem(59);
+		background: #f4f6f5;
+		display: flex;
+		justify-content: space-between;
+		column-gap: toRem(40);
+		@include adaptiveValue("padding-top", 77, 35);
+		// @include adaptiveValue("padding-bottom", 90, 0);
+		@include adaptiveValue("padding-left", 82, 0);
+		@include adaptiveValue("padding-right", 82, 0);
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
+	}
+	// .info-box
+	&__info-box {
+		flex: 0 1 42%;
+		flex-grow: 1;
+		background: #f4f6f5;
+		@media (max-width: $tablet) {
+			margin-bottom: toRem(32);
+		}
+		@media (max-width:$mobileSmall){
+			padding: toRem(0) toRem(10);  
+		}
+	}
+	// .hero__box
+	&__box {
+		display: flex;
+		flex-direction: column;
+		max-width: toRem(496);
+		@include adaptiveValue("margin-bottom", 40, 10);
+	}
+	// .hero__title
+	&__title {
+		@include adaptiveValue("font-size", 96, 50, 0, 1720, 992);
+		font-weight: 900;
+		line-height: 125%;
+		text-transform: uppercase;
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 96, 50);
+		}
+		// .hero__title--1
+		&--1 {
+			@include adaptiveValue("padding-left", 38, 15);
+			flex-shrink: 0;
+			background-color: #fff;
+			max-width: toRem(436);
+			@include adaptiveValue("max-width", 436, 200);
+			transform: rotate(-2deg);
+			@media (max-width: $tablet) {
+				// max-width: toRem(200);
+			}
+		}
+		// .hero__title--2
+		&--2 {
+			@include adaptiveValue("padding-left", 38, 15);
+		}
+		// .hero__title--3
+		&--3 {
+			@include adaptiveValue("max-width", 496, 270);
+			@include adaptiveValue("padding-left", 38, 15);
+			background-color: #ebd96b;
+			transform: rotate(-2deg);
+		}
+		// .hero__title--4
+		&--4 {
+			@include adaptiveValue("padding-left", 38, 15);
+		}
+	}
+	// .hero__text
+	&__text {
+		width: 100%;
+		@include adaptiveValue("font-size", 32, 16, 0, 1720, 992);
+		letter-spacing: toRem(-1.6);
+		@include adaptiveValue("letter-spacing", -1.6, 1, 0, 1720, 992);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 32, 24);
+		}
+	}
+	// .hero__buttons
+	&__buttons {
+		@include adaptiveValue("margin-top", 40, 15);
+		// width: toRem(445);
+		@include adaptiveValue("width", 445, 400, 0, 1720, 992);
+		text-align: right;
+		align-items: center;
+		position: relative;
+		&::before {
+			content: "";
+			background: url("img/hero/vector.png") 0 center no-repeat;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			@media (max-width: $mobileSmall) {
+				flex-direction: column;
+				left: toRem(20);
+			}
+		}
+		@media (max-width: $tablet) {
+			max-width: toRem(445);
+			width: 100%;
+		}
+	}
+	// .hero__btn
+	&__btn {
+		display: inline-block;
+		@include adaptiveValue("font-size", 30, 24, 0, 1720, 992);
+		font-weight: 500;
+		letter-spacing: toRem(-1.5);
+		border-radius: toRem(10);
+		line-height: 1.46;
+		padding: toRem(19) toRem(41);
+		flex: 0 0 auto; // чтобы текст в кнопке не складывался
+		position: relative;
+		z-index: 5;
+		transition: color 0.3s ease;
+		&:hover {
+			color: #e5c643;
+		}
+		@media (max-width: $mobileSmall) {
+			text-align: center;
+			flex: 0 1 auto;
+			width: 100%;
+			letter-spacing: toRem(1);
+		}
+	}
+	// .hero__box-image
+	&__image-box-image {
+		flex: 0 1 51.64%;
+		height: percent(784, 871);
+		background-color: #ebd96b;
+	}
+	// .hero__image-ibg
+	&__image {
+		img {
+			max-width: 100%;
+			object-fit: cover;
+		}
+	}
+}
 
 //=========================================================================================
 //=========================================================================================
