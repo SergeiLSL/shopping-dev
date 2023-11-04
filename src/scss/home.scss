@@ -9,6 +9,9 @@
 	// .page__arrivals
 	&__arrivals {
 	}
+	// .page__banner
+	&__banner {
+	}
 	// .page__new-arrivals
 	&__new-arrivals {
 	}
@@ -195,8 +198,6 @@
 			color: #e5c643;
 		}
 		@media (max-width: $mobileSmall) {
-			// text-align: center;
-			// flex: 0 1 auto;
 			width: 100%;
 			letter-spacing: toRem(1);
 		}
@@ -270,7 +271,7 @@
 		position: relative;
 		z-index: 0;
 		&::after {
-			background: url('@img/vector.png') left bottom no-repeat;
+			background: url("@img/vector.png") left bottom no-repeat;
 			content: "";
 			position: absolute;
 			width: 100%;
@@ -420,6 +421,124 @@
 		left: 0;
 	}
 }
+//================================================================================
+//================================================================================
+// .page__banner
+.banner {
+	background: linear-gradient(1deg, #e0c340 0.13%, #dfc23e 3.97%, #e1c441 7.2%, #e3c743 10.13%, #e4c542 12.98%, #e6c744 15.99%, #e7c845 19.52%, #e5c643 23.96%, #e6c945 30.43%, #e3c743 36.49%, #e9ca48 42.49%, #edce49 49.35%, #f0d44c 55.42%, #f4d84f 61.43%, #f6da52 65.74%, #f7db53 72.23%, #f9dd55 77.43%, #f9df56 83.84%, #fae157 91.52%, #f9df56 97.87%);
+	// .banner__container
+	&__container {
+	}
+	// .banner__inner
+	&__inner {
+		display: flex;
+		align-items: center;
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
+	}
+	// .banner__box-image
+	&__box-image {
+		flex: 0 1 51.68%;
+		@media (max-width: $tablet) {
+			flex: 0 1 68%;
+			flex-grow: 1;
+			width: 100%;
+			height: percent(968, 992);
+		}
+	}
+	// .banner__image
+	&__image-ibg {
+		padding-bottom: 97.6%; /* 968/992 */
+	}
+	// .banner__info-box
+	&__info-box {
+		flex: 0 1 48%;
+		margin-left: toRem(63);
+		@include adaptiveValue("margin-left", 63, 20, 0, 1920, 992);
+		@include adaptiveValue("padding-top", 128, 30);
+		@include adaptiveValue("padding-bottom", 155, 40);
+		@media (max-width: $tablet) {
+			flex: 0 1 35%;
+		}
+	}
+	// .banner__box
+	&__box {
+		max-width: toRem(668);
+		padding-left: toRem(27);
+		padding-right: toRem(20);
+		@media (max-width: $mobileSmall) {
+			padding-left: toRem(10);
+		}
+	}
+	// .banner__title
+	&__title {
+		color: #000;
+		font-weight: 900;
+		@include adaptiveValue("font-size", 111, 50, 0, 1920, 992);
+		@include adaptiveValue("line-height", 137, 50);
+		text-transform: uppercase;
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 90, 50, 0, 992, 320);
+			@include adaptiveValue("line-height", 120, 60, 0, 992, 320);
+		}
+		// .banner__title--1
+		&--1 {
+			padding-left: toRem(15);
+			flex-shrink: 0;
+			background-color: #fff;
+			max-width: toRem(525);
+			@include adaptiveValue("max-width", 525, 200);
+			transform: rotate(-2deg);
+			position: relative;
+			left: toRem(-15);
+		}
+		// .banner__title--2
+		&--2 {
+		}
+		@include adaptiveValue("margin-bottom", 33, 20, 0, 1920, 992);
+	}
+	// .banner__text
+	&__text {
+		color: #231300;
+		@include adaptiveValue("font-size", 36, 20, 0, 1920, 992);
+		font-weight: 500;
+		@include adaptiveValue("line-height", 52, 30, 0, 1920, 992);
+		letter-spacing: toRem(-0.721);
+		& p:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 20, 0, 1920, 992);
+		}
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 36, 20, 0, 992, 320);
+			@include adaptiveValue("line-height", 52, 30, 0, 992, 320);
+		}
+	}
+	// .banner__data
+	&__data {
+		color: #000;
+		font-weight: 700;
+	}
+	// .banner__buttons
+	&__buttons {
+		@include adaptiveValue("margin-top", 51, 20);
+	}
+	// .banner__btn
+	&__btn {
+		font-size: toRem(28);
+		font-weight: 700;
+		letter-spacing: toRem(0.56);
+		text-align: center;
+		padding-left: toRem(51);
+		padding-right: toRem(51);
+		@include adaptiveValue("padding-top", 27, 27, 0, 1920, 992);
+		@include adaptiveValue("padding-bottom", 38, 27, 0, 1920, 992);
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+			letter-spacing: toRem(1);
+		}
+	}
+}
+
 //================================================================================
 //================================================================================
 // .page__community
