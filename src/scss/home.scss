@@ -267,6 +267,18 @@
 		letter-spacing: toRem(2.88);
 		text-transform: uppercase;
 		@include adaptiveValue("margin-bottom", 114, 30);
+		position: relative;
+		z-index: 0;
+		&::after {
+			background: url('@img/vector.png') left bottom no-repeat;
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			bottom: 0;
+			left: 12.5%;
+			z-index: -1;
+		}
 	}
 	// .arrivals__row
 	&__row {
