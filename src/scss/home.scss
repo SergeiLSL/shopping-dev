@@ -6,6 +6,9 @@
 	// .page__brands
 	&__brands {
 	}
+	// .page__arrivals
+	&__arrivals {
+	}
 	// .page__new-arrivals
 	&__new-arrivals {
 	}
@@ -95,39 +98,39 @@
 	&__box {
 	}
 	// .info-column__title
-		&__title {
-			@include adaptiveValue("font-size", 96, 50, 0, 1920, 992);
-			font-weight: 900;
-			line-height: 125%;
-			text-transform: uppercase;
-			// margin-bottom: toRem(40);
-			@media (max-width: $tablet) {
-				@include adaptiveValue("font-size", 96, 50, 0, 991, 320);
-				@include adaptiveValue("padding-left", 20, 0, 991, 340);
-			}
-			&--1 {
-				@include adaptiveValue("padding-left", 38, 15);
-				flex-shrink: 0;
-				background-color: #fff;
-				max-width: toRem(436);
-				@include adaptiveValue("max-width", 436, 200);
-				transform: rotate(-2deg);
-			}
-			// .hero__title--2
-			&--2 {
-				@include adaptiveValue("padding-left", 38, 15);
-			}
-			// .hero__title--3
-			&--3 {
-				@include adaptiveValue("max-width", 496, 270);
-				@include adaptiveValue("padding-left", 38, 15);
-				background-color: #ebd96b;
-				transform: rotate(-2deg);
-			}
-			&--4 {
-				@include adaptiveValue("padding-left", 38, 15);
-			}
+	&__title {
+		@include adaptiveValue("font-size", 96, 50, 0, 1920, 992);
+		font-weight: 900;
+		line-height: 125%;
+		text-transform: uppercase;
+		// margin-bottom: toRem(40);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 96, 50, 0, 991, 320);
+			@include adaptiveValue("padding-left", 20, 0, 991, 340);
 		}
+		&--1 {
+			@include adaptiveValue("padding-left", 38, 15);
+			flex-shrink: 0;
+			background-color: #fff;
+			max-width: toRem(436);
+			@include adaptiveValue("max-width", 436, 200);
+			transform: rotate(-2deg);
+		}
+		// .hero__title--2
+		&--2 {
+			@include adaptiveValue("padding-left", 38, 15);
+		}
+		// .hero__title--3
+		&--3 {
+			@include adaptiveValue("max-width", 496, 270);
+			@include adaptiveValue("padding-left", 38, 15);
+			background-color: #ebd96b;
+			transform: rotate(-2deg);
+		}
+		&--4 {
+			@include adaptiveValue("padding-left", 38, 15);
+		}
+	}
 	// .info-column__text
 	&__text {
 		width: 100%;
@@ -247,22 +250,166 @@
 		}
 	}
 }
-//=========================================================================================
 //================================================================================
-// .page__new-arrivals
-.new-arrivals {
-	@include adaptiveValue("padding-top", 75, 25);
-	@include adaptiveValue("padding-bottom", 75, 25);
-	background-color: #fff;
-	// .new-arrivals__container
+//================================================================================
+// .page__arrivals
+.arrivals {
+	@include adaptiveValue("padding-top", 120, 50);
+	@include adaptiveValue("padding-bottom", 120, 50);
+	// .arrivals__container
 	&__container {
 	}
-	// .new-arrivals__inner
-	&__inner {
+	// .arrivals__title
+	&__title {
+		@include adaptiveValue("font-size", 48, 32);
+		font-weight: 900;
+		line-height: toRem(50);
+		letter-spacing: toRem(2.88);
+		text-transform: uppercase;
+		@include adaptiveValue("margin-bottom", 114, 30);
+	}
+	// .arrivals__row
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: toRem(131);
+		@include adaptiveValue("column-gap", 131, 20, 0, 1920, 992);
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(2, 1fr);
+			row-gap: toRem(30);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: auto;
+		}
+	}
+	// .arrivals__column
+	&__column {
+	}
+	// .arrivals__item
+	&__item {
+	}
+	// .arrivals__image-ibg
+	&__image-ibg {
+		border-radius: toRem(25);
+		overflow: hidden;
+		padding-bottom: 145.454545%; /* 704/484 */
+		img {
+		}
+		transition: all 0.5s;
+		&:hover {
+			transform: scale(1.02);
+		}
+	}
+	// .arrivals__body
+	&__body {
+		@include adaptiveValue("margin-top", 28, 14);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .arrivals__info
+	&__info {
+	}
+	// .arrivals__name
+	&__name {
+		@include adaptiveValue("font-size", 32, 24, 0, 1920, 992);
+		line-height: toRem(50);
+		letter-spacing: toRem(-1.28);
+		@media (max-width: $tablet) {
+			font-size: toRem(32);
+			@include adaptiveValue("font-size", 32, 26);
+		}
+		@media (max-width: $mobile) {
+			font-size: toRem(32);
+		}
+	}
+	// .arrivals__link
+	&__link {
+		color: #7f7f7f;
+		@include adaptiveValue("font-size", 24, 18);
+		letter-spacing: toRem(-0.96);
+		display: inline-block;
+		padding-top: toRem(8);
+		padding-bottom: toRem(2);
+		position: relative;
+		&::after {
+			position: absolute;
+			content: "";
+			height: toRem(1);
+			background-color: #555555;
+			bottom: 0;
+			left: 50%;
+			width: 0;
+			transition: all 0.3s;
+		}
+		&:hover::after {
+			left: 0;
+			width: 100%;
+		}
+		@media (max-width: $tablet) {
+			font-size: toRem(24);
+			padding-top: toRem(15);
+		}
+	}
+	// .arrivals__arrow-1
+	&__arrow-1 {
+	}
+}
+
+//================
+.arrow-1 {
+	cursor: pointer;
+	position: relative;
+	width: toRem(32);
+	height: toRem(50); //
+	margin: toRem(25) toRem(20); //
+	& div {
+		position: relative;
+		top: toRem(20);
+		width: toRem(42);
+		height: toRem(3);
+		background-color: #797979;
+		left: 0;
+		display: block;
+		&::after {
+			content: "";
+			position: absolute;
+			width: toRem(20);
+			height: toRem(3);
+			top: toRem(-6);
+			right: toRem(-3);
+			background-color: #797979;
+			transform: rotate(45deg);
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: toRem(20);
+			height: toRem(3);
+			top: toRem(6);
+			right: toRem(-3);
+			background-color: #797979;
+			transform: rotate(-45deg);
+		}
+	}
+	&:hover {
+		animation: arrow-1 1s linear infinite;
+	}
+}
+
+@keyframes arrow-1 {
+	0% {
+		left: 0;
+	}
+	50% {
+		left: toRem(10);
+	}
+	100% {
+		left: 0;
 	}
 }
 //================================================================================
-//=========================================================================================
+//================================================================================
 // .page__community
 .community {
 	@include adaptiveValue("padding-top", 141, 35);
