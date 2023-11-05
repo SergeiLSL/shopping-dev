@@ -80,7 +80,6 @@
 		position: relative;
 		flex: 0 1 46%;
 		flex-grow: 1;
-		background: #8fa9cc;
 		@media (max-width: $tablet) {
 			width: 100%;
 			height: percent(784, 871);
@@ -96,8 +95,8 @@
 			object-fit: cover;
 		}
 	}
-	// .hero__column-icons
-	&__column-icons {
+	// .hero__icons
+	&__icons {
 	}
 }
 
@@ -210,8 +209,7 @@
 }
 //=========================================================================================
 // Здесь стили всех звездочек
-
-.icons-main-block {
+.icons-hero-block {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -221,30 +219,29 @@
 	@media (max-width: $mobile) {
 		opacity: 0.2;
 	}
-	// .icons-main-block__item
+	// .icons-hero-block__item
 	&__item {
 		position: absolute;
-		// .icons-main-block__item_1
-		&_1 {
+		// .icons-hero-block__item_1
+		&--1 {
 			top: percent(15, 784); // ? левая верхняя
 			left: percent(-15, 871);
 		}
-		// .icons-main-block__item_2
-		&_2 {
+		// .icons-hero-block__item_2
+		&--2 {
 			top: percent(36, 784); // ? правая верхняя
 			left: percent(670, 871);
 		}
-		// .icons-main-block__item_3
-		&_3 {
+		// .icons-hero-block__item_3
+		&--3 {
 			top: percent(710, 784); // ? левая нижняя
 			left: percent(20, 871);
 		}
-		// .icons-main-block__item_4
-		&_4 {
+		// .icons-hero-block__item_4
+		&--4 {
 			top: percent(600, 784); // ? правая нижняя
 			left: percent(800, 871);
 		}
-		// .icons-main-block__item_5
 	}
 }
 
@@ -484,6 +481,7 @@
 	}
 	// .banner__box-image
 	&__box-image {
+		position: relative;
 		flex: 0 1 51.68%;
 		@media (max-width: $tablet) {
 			flex: 0 1 68%;
@@ -582,8 +580,50 @@
 			letter-spacing: toRem(1);
 		}
 	}
+	// .banner__icons
+	&__icons {
+	}
+}
+//=========================================================================================
+// Здесь стили всех звездочек
+.icons-banner-block {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	@media (max-width: $mobile) {
+		opacity: 0.2;
+	}
+	// .icons-banner-block__item
+	&__item {
+		position: absolute;
+		// .icons-banner-block__item--1
+		&--1 {
+			top: percent(155, 968); // ? левая верхняя
+			left: percent(170, 992);
+		}
+		// .icons-banner-block__item--2
+		&--2 {
+			top: percent(120, 968); // ? правая верхняя
+			left: percent(780, 992);
+		}
+		// .icons-banner-block__item--3
+		&--3 {
+			top: percent(520, 968); // ? левая нижняя
+			left: percent(220, 992);
+		}
+		// .icons-banner-block__item--4
+		&--4 {
+			top: percent(650, 968); // ? правая нижняя
+			left: percent(800, 992);
+		}
+	}
 }
 
+//========================================================================================
+//=========================================================================================
 //================================================================================
 //================================================================================
 // .page__community
