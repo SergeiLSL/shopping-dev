@@ -15,6 +15,9 @@
 	// .page__new-fashion
 	&__new-fashion {
 	}
+	// .page__lifestyle
+	&__lifestyle {
+	}
 	// .page__community
 	&__community {
 	}
@@ -574,13 +577,11 @@
 	}
 }
 //========================================================================================
-//========================================================================================
-//================================================================================
 //================================================================================
 // .page__favourite
 .favourite {
 	@include adaptiveValue("padding-top", 120, 50);
-	@include adaptiveValue("padding-bottom", 120, 50);
+	@include adaptiveValue("padding-bottom", 120, 10);
 	// .favourite__container
 	&__container {
 	}
@@ -704,6 +705,261 @@
 	}
 	// .favourite__arrow-1
 	&__arrow-1 {
+	}
+}
+//================================================================================
+//================================================================================
+// .page__lifestyle
+.lifestyle {
+	// .lifestyle__container
+	&__container {
+	}
+	// .lifestyle__inner
+	&__inner {
+		background: #f2ffd8;
+		display: flex;
+		align-items: center;
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
+	}
+	// .lifestyle__column
+	&__column {
+		flex: 0 1 50%;
+	}
+	// .lifestyle__text-block
+	&__text-block {
+	}
+	// .lifestyle__content
+	&__content {
+	}
+}
+
+.block-text {
+	@include adaptiveValue("margin-left", 43, 10);
+	@include adaptiveValue("padding-top", 181, 50);
+	@include adaptiveValue("margin-bottom", 147, 0);
+	max-width: toRem(510);
+	// .block-text__title
+	&__title {
+		@include adaptiveValue("font-size", 48, 32);
+		font-weight: 900;
+		line-height: 150%;
+		letter-spacing: toRem(2.88);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 41, 20);
+		}
+	}
+	// .block-text__text
+	&__text {
+		color: #7c7c7c;
+		@include adaptiveValue("font-size", 24, 16);
+		font-weight: 500;
+		line-height: 145.833%; /* 35/24 */
+		letter-spacing: toRem(-0.96);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 65, 30);
+		}
+	}
+	// .block-text__items
+	&__items {
+		display: flex;
+		gap: toRem(19);
+	}
+	// .block-text__item
+	&__item {
+	}
+	// .block-text__link
+	&__link {
+		max-width: toRem(236);
+		max-height: toRem(71);
+		transition: opacity 0.3s;
+		img {
+			max-width: 100%;
+		}
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+.content-mobile {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	@include adaptiveValue("padding-top", 110, 40);
+	@include adaptiveValue("padding-bottom", 206, 40);
+	padding-left: toRem(50); 
+	padding-right: toRem(50);
+	@media (max-width:$mobileSmall){
+		padding-left: toRem(30); 
+		padding-right: toRem(30);
+	}
+	// .content-lifestyle__mobile
+	&__mobile {
+	}
+	// .content-lifestyle__body
+	&__bodu {
+	}
+	// .content-lifestyle__row
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: toRem(20.11);
+		overflow: hidden;
+		@include adaptiveValue("column-gap", 20, 10, 0, 1920, 992);
+		// @media (max-width: $tablet) {
+		// 	grid-template-columns: auto;
+		// 	row-gap: toRem(20);
+		// }
+	}
+	// .content-lifestyle__column
+	&__column {
+	}
+	// .content-lifestyle__item
+	&__item {
+	}
+	// .content-lifestyle__menu
+	&__menu {
+	}
+}
+
+.mobile {
+	border-radius: 34.975px;
+	border: toRem(22.5) solid #c2c8da;
+	background: #fff;
+	box-shadow: 0px 4px 63px 0px rgba(0, 0, 0, 0.25);
+	position: relative;
+	padding-top: toRem(39.35);
+	padding-bottom: toRem(26.36);
+	@include adaptiveValue("padding-left", 24, 10);
+	@include adaptiveValue("padding-right", 26, 10);
+	// .mobile__header
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: toRem(22.32);
+		}
+	}
+	// .mobile__title
+	&__title {
+		display: inline-block;
+		font-size: toRem(22);
+		&:not(:last-child) {
+			margin-bottom: toRem(19.24);
+		}
+		position: relative;
+		z-index: 0;
+		&::after {
+			background: url("@img/shopping/vector.png") left bottom no-repeat;
+			max-width: toRem(62.08);
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			bottom: 0;
+			left: 100%;
+			transform: translateX(-100%);
+			z-index: -1;
+		}
+	}
+	// .mobile__search
+	&__search {
+		&:not(:last-child) {
+			margin-bottom: toRem(19.24);
+		}
+	}
+	// .mobile__buttons
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: toRem(25.36);
+		}
+	}
+	// .mobile__button
+	&__button {
+		display: inline-block;
+		text-align: center;
+		font-size: toRem(10.493);
+		font-weight: 500;
+		padding: toRem(6.12) toRem(15) toRem(2.62) toRem(15);
+		color: #8a8a8a;
+		border-radius: 12.241px;
+		background-color: #e9e6e6;
+		&:first-child {
+			color: #000;
+			background-color: #ebd96b;
+		}
+	}
+}
+
+.item-content {
+	// .item-content__image-ibg
+	&__image-ibg {
+		border-radius: toRem(20);
+		overflow: hidden;
+		padding-bottom: 141.40625%; /* 181/128 */
+		position: relative;
+		img {
+			transition: all 0.3s ease 0s; // увеличиваем картинку плавно
+		}
+		transition: all 0.5s;
+		&:hover {
+			transform: scale(1.04);
+		}
+		margin-bottom: toRem(11.17);
+	}
+	// .item-content__body
+	&__body {
+	}
+	// .item-content__info
+	&__info {
+		font-size: toRem(12.241);
+	}
+	// .item-content__name
+	&__name {
+		font-weight: 500;
+		margin-bottom: toRem(5);
+	}
+	// .item-content__prise
+	&__prise {
+		color: #757575;
+	}
+}
+
+.menu-mobile {
+	z-index: 5;
+	// align-items: center;
+	background-color: #fff;
+	position: absolute;
+	width: 100%;
+	bottom: toRem(10);
+	max-width: toRem(278);
+	padding-top: toRem(10);
+	// .menu-lifestyle__body
+	&__body {
+	}
+	// .menu-lifestyle__list
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: toRem(275);
+		padding-top: toRem(11.37);
+		padding-bottom: toRem(15);
+	}
+
+	// .menu-lifestyle__item
+	&__item {
+	}
+	// .menu-lifestyle__link
+	&__link {
 	}
 }
 
