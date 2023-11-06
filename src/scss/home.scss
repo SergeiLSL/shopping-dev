@@ -6,14 +6,14 @@
 	// .page__brands
 	&__brands {
 	}
-	// .page__arrivals
-	&__arrivals {
+	// .page__fashion
+	&__fashion {
 	}
 	// .page__banner
 	&__banner {
 	}
-	// .page__new-arrivals
-	&__new-arrivals {
+	// .page__new-fashion
+	&__new-fashion {
 	}
 	// .page__community
 	&__community {
@@ -22,7 +22,7 @@
 //===========================================================================================
 //================================================================================
 .hero {
-	@include adaptiveValue("padding-top", 68, 30);
+	@include adaptiveValue("padding-top", 164, 110);
 	@include adaptiveValue("margin-bottom", 63, 15);
 	&__column-info {
 		flex: 0 1 32.5%;
@@ -295,14 +295,14 @@
 }
 //================================================================================
 //================================================================================
-// .page__arrivals
-.arrivals {
+// .page__fashion
+.fashion {
 	@include adaptiveValue("padding-top", 120, 50);
 	@include adaptiveValue("padding-bottom", 120, 50);
-	// .arrivals__container
+	// .fashion__container
 	&__container {
 	}
-	// .arrivals__title
+	// .fashion__title
 	&__title {
 		display: inline-block;
 		@include adaptiveValue("font-size", 48, 32);
@@ -326,7 +326,7 @@
 			z-index: -1;
 		}
 	}
-	// .arrivals__row
+	// .fashion__row
 	&__row {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -340,13 +340,13 @@
 			grid-template-columns: auto;
 		}
 	}
-	// .arrivals__column
+	// .fashion__column
 	&__column {
 	}
-	// .arrivals__item
+	// .fashion__item
 	&__item {
 	}
-	// .arrivals__image-ibg
+	// .fashion__image-ibg
 	&__image-ibg {
 		border-radius: toRem(20);
 		overflow: hidden;
@@ -358,17 +358,17 @@
 			transform: scale(1.02);
 		}
 	}
-	// .arrivals__body
+	// .fashion__body
 	&__body {
 		@include adaptiveValue("margin-top", 28, 14);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
-	// .arrivals__info
+	// .fashion__info
 	&__info {
 	}
-	// .arrivals__name
+	// .fashion__name
 	&__name {
 		@include adaptiveValue("font-size", 32, 24, 0, 1920, 992);
 		font-weight: 500;
@@ -382,7 +382,7 @@
 			font-size: toRem(32);
 		}
 	}
-	// .arrivals__link
+	// .fashion__link
 	&__link {
 		color: #7f7f7f;
 		@include adaptiveValue("font-size", 24, 18);
@@ -410,7 +410,7 @@
 			padding-top: toRem(15);
 		}
 	}
-	// .arrivals__arrow-1
+	// .fashion__arrow-1
 	&__arrow-1 {
 	}
 }
