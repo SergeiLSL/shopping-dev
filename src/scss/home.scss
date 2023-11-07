@@ -220,11 +220,17 @@
 	left: 0;
 	pointer-events: none;
 	@media (max-width: $mobile) {
-		opacity: 0.2;
+		// opacity: 0.2;
 	}
 	// .icons-hero-block__item
 	&__item {
 		position: absolute;
+		img {
+			@media (max-width: $mobileSmall) {
+				width: toRem(40);
+				height: toRem(40);
+			}
+		}
 		// .icons-hero-block__item_1
 		&--1 {
 			top: percent(15, 784); // ? левая верхняя
@@ -438,11 +444,15 @@
 	&__box-image {
 		position: relative;
 		flex: 0 1 51.68%;
+		z-index: 5;
 		@media (max-width: $tablet) {
 			flex: 0 1 68%;
 			flex-grow: 1;
 			width: 100%;
 			height: percent(968, 992);
+		}
+		@media (max-width: $mobile) {
+			width: 100%;
 		}
 	}
 	// .banner__image
@@ -549,15 +559,25 @@
 	left: 0;
 	pointer-events: none;
 	@media (max-width: $mobile) {
-		opacity: 0.2;
+		// opacity: 0.4;
 	}
 	// .icons-banner-block__item
 	&__item {
 		position: absolute;
+		img {
+			@media (max-width: $mobileSmall) {
+				width: toRem(40);
+				height: toRem(40);
+			}
+		}
 		// .icons-banner-block__item--1
 		&--1 {
 			top: percent(155, 968); // ? левая верхняя
 			left: percent(170, 992);
+			@media (max-width: $mobileSmall) {
+				top: percent(155, 968); // ? левая верхняя
+				left: percent(17, 140);
+			}
 		}
 		// .icons-banner-block__item--2
 		&--2 {
@@ -567,7 +587,7 @@
 		// .icons-banner-block__item--3
 		&--3 {
 			top: percent(520, 968); // ? левая нижняя
-			left: percent(220, 992);
+			left: percent(22, 170);
 		}
 		// .icons-banner-block__item--4
 		&--4 {
@@ -716,7 +736,7 @@
 	}
 	// .lifestyle__inner
 	&__inner {
-		background: #f2ffd8;
+		// background: #272923;
 		display: flex;
 		align-items: center;
 		@media (max-width: $tablet) {
@@ -726,6 +746,11 @@
 	// .lifestyle__column
 	&__column {
 		flex: 0 1 50%;
+		@media (max-width: $tablet) {
+			&:nth-child(2) {
+				width: 100%;
+			}
+		}
 	}
 	// .lifestyle__text-block
 	&__text-block {
@@ -736,18 +761,27 @@
 }
 
 .block-text {
-	@include adaptiveValue("margin-left", 43, 10);
-	@include adaptiveValue("padding-top", 181, 50);
+	@include adaptiveValue("margin-left", 43, 20);
+	@include adaptiveValue("padding-top", 181, 30);
 	@include adaptiveValue("margin-bottom", 147, 0);
 	max-width: toRem(510);
+	position: relative;
+	z-index: 15;
+	@media (max-width: $tablet) {
+		margin-left: toRem(20);
+		margin-right: toRem(20);
+	}
 	// .block-text__title
 	&__title {
-		@include adaptiveValue("font-size", 48, 32);
+		@include adaptiveValue("font-size", 48, 36);
 		font-weight: 900;
-		line-height: 150%;
+		line-height: 1.5;
 		letter-spacing: toRem(2.88);
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 41, 20);
+		}
+		@media (max-width: $mobileSmall) {
+			line-height: 1.3;
 		}
 	}
 	// .block-text__text
@@ -765,6 +799,10 @@
 	&__items {
 		display: flex;
 		gap: toRem(19);
+		@media (max-width: toRem(560)) {
+			flex-direction: column;
+			text-align: center;
+		}
 	}
 	// .block-text__item
 	&__item {
@@ -792,14 +830,16 @@
 	position: relative;
 	@include adaptiveValue("padding-top", 110, 40);
 	@include adaptiveValue("padding-bottom", 206, 40);
-	padding-left: toRem(50); 
+	padding-left: toRem(50);
 	padding-right: toRem(50);
-	@media (max-width:$mobileSmall){
-		padding-left: toRem(30); 
+	@media (max-width: $mobileSmall) {
+		padding-left: toRem(30);
 		padding-right: toRem(30);
 	}
 	// .content-lifestyle__mobile
 	&__mobile {
+		position: relative;
+		z-index: 15;
 	}
 	// .content-lifestyle__body
 	&__bodu {
@@ -960,6 +1000,106 @@
 	}
 	// .menu-lifestyle__link
 	&__link {
+	}
+}
+
+// Здесь стили всех звездочек
+.icons-mobile-block {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	&__ball {
+		pointer-events: none;
+		position: absolute;
+		&::before {
+			content: "";
+			display: block;
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+			// transform: translate(-50%, -58%);
+		}
+		// .icons-main-block__circle_1
+		&_1 {
+			top: 75%;
+			left: 8%;
+			width: toRem(34);
+			height: toRem(34);
+			&::before {
+				background: #ebd96b;
+			}
+		}
+		&_2 {
+			top: 16%;
+			left: 12%;
+			width: toRem(22);
+			height: toRem(22);
+			&::before {
+				background: #89807a;
+			}
+		}
+		&_3 {
+			top: 18%;
+			left: 78%;
+			width: toRem(50);
+			height: toRem(50);
+			&::before {
+				background: #ebd96b;
+			}
+		}
+		&_4 {
+			top: 65%;
+			left: 85%;
+			width: toRem(17);
+			height: toRem(17);
+			&::before {
+				background: #89807a;
+			}
+		}
+		// .icons-main-block__circle_2
+		// &_2 {
+		// 	@include adaptiveValue("width", 537, 480);
+		// 	@include adaptiveValue("height", 537, 480);
+		// }
+		// .icons-main-block__circle_2
+		// &_3 {
+		// 	@include adaptiveValue("width", 440, 380);
+		// 	@include adaptiveValue("height", 440, 380);
+		// }
+	}
+	&__circle {
+		pointer-events: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		&::before {
+			content: "";
+			display: block;
+			border-radius: 50%;
+			border: 2.5px solid #efeceb;
+			// background: #fff;
+			width: 100%;
+			height: 100%;
+			transform: translate(-50%, -58%);
+		}
+		// .icons-main-block__circle_1
+		&_1 {
+			@include adaptiveValue("width", 637, 570);
+			@include adaptiveValue("height", 637, 570);
+		}
+		// .icons-main-block__circle_2
+		&_2 {
+			@include adaptiveValue("width", 537, 480);
+			@include adaptiveValue("height", 537, 480);
+		}
+		// .icons-main-block__circle_2
+		&_3 {
+			@include adaptiveValue("width", 440, 380);
+			@include adaptiveValue("height", 440, 380);
+		}
 	}
 }
 
